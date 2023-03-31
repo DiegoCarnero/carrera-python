@@ -1,0 +1,166 @@
+Valen 'False':
+ - False
+ - 0 o 0.0
+ - secuencias vacias [],(),""
+ - diccionario vacio {}
+
+Variables son más o menos punteros. Borrar bariables con 'del var'
+
+variables declarados dentro de una estructura son accesibles desde fuera
+
+Concatenar str:
+"hay espacio",1,"entre elementos"
+"No hay espacio "+str(1)+" entre elementos"
+
+Print decimales
+    >>> a = 13.946
+    >>> print(a)
+    13.946
+    >>> print("%.2f" % a)
+    13.95
+    >>> round(a,2)
+    13.949999999999999
+    >>> print("%.2f" % round(a, 2))
+    13.95
+    >>> print("{:.2f}".format(a))
+    13.95
+    >>> print("{:.2f}".format(round(a, 2)))
+    13.95
+    >>> print("{:.15f}".format(round(a, 2)))
+    13.949999999999999
+python no tiene double
+
+Variables y modulos
+
+__var__ = '1'
+modulo.__var__
+
+from modulo import func,__var__
+from modulo import * <- coge func pero no var porque __
+
+paquetes: carpetas con un __init__.py
+
+print('Acabar print sin salto de linea con->', end=' ')
+
+lista: []
+    lista[inicio:fin:salto]
+diccionario = {}
+tupla = ()
+set = desordenado, puede tener varias copias del mismo objeto
+
+print(*var) muestra los valores sin {}, [], (). Los diccionarios pone solo las claves
+
+directorios con espacios = ['"C:\\My Documents"']
+
+ejecutar comandos de sistema: os.system(cmd). devuelve codigo de resutlado
+
+convertir lista a string: ' '.join(list)
+
+concatenacion multilinea: str = 'aa' + \
+                            'bb'
+
+dir(modulo): lista con elementos de ese modulos
+dir(): lista con elementos del modulo actual
+
+OOP:
+constructor: def __init__(self,args)
+                cualquier variable declarada mediante self.var dentro de init 
+metodo de objeto: def func(self)
+metodo de clase: 
+    @classmethod <- decorator. Igual que hacer how_many = classmethod(how_many)
+    def func(cls)
+
+herencia:
+    class Tipo1:
+
+    class Tipo2(Tipo1):
+        def __init__(self):
+            tipo1.__init__(self)
+			ó
+            super.__init__(self)
+
+
+variables de clase: en la clase
+                " privadas: __privatevar
+variables de objeto: en los args de __init__
+
+Documentacion:
+''' entre triples comillas simpels '''
+invocar con: Clase.metodo.__doc__
+
+guardar y leer vars:
+    f = open('archivo', 'wb')
+    pickle.dump(var1,f)
+    f.close()
+    f = open('archivo', 'rb')
+    var2 = pickle.load(f)
+    f.close()
+
+# encoding=utf-8 al ppio de un programa 
+
+Excepciones:
+    Capturar:
+        try
+            ...
+        except EOFError:
+            ...
+        except (KeyboardInterrupt,NameError):
+            ...
+        except:
+            ...
+        else
+            todo bien
+    Lanzar:
+        class MiException(Exception):
+            def __init__(self):
+                Exception.__init__(self)
+
+        raise MiException()
+
+with open('archivo') as f:
+    ...
+
+str directorios: os.path.join(var1,var2,'') <- acabar con '' para que termine con separador
+
+pruebas unitarias: pytest. Ejecutar en el directorio y coje todos los archivos test_*.py o *_test.py
+autoformater: black. Activar en vscode
+linter: flake8
+
+parametros opcionales: no usar tipos mutables
+si se hace def func(dict={}):
+y se llama a la funcion dos veces, usa el mismo dict. Poner dict=None e inicializar en el cuerpo
+
+*args,**kwargs
+>>> print(some_items)
+['Coffee', 'Tea', 'Cake', 'Bread']
+>>> print(*some_items)
+Coffee Tea Cake Bread
+
+funciones lambda: 
+>>> lambda x, y: x + y
+<function <lambda> at 0x7ffba9bd4550>
+>>> _(1, 2)
+3
+>>> (lambda x, y: x - y)(2, 3)
+-1
+
+Type                       Public               Internal            
+Packages                   lower_with_under                         
+Modules                    lower_with_under     _lower_with_under    
+Classes                    CapWords             _CapWords            
+Exceptions                 CapWords                                 
+Functions                  lower_with_under()   _lower_with_under    
+Global/Class Constants     CAPS_WITH_UNDER      _CAPS_WITH_UNDER    
+Global/Class Variables     lower_with_under                       
+Instance Variables         lower_with_under     _lower_with_under (protected) or __lower_with_under (private)
+Method Names               lower_with_under()   _lower_with_under() (protected) or __lower_with_under() (private)
+Function/Method Parameters lower_with_under                         
+Local Variables            lower_with_under                         
+
+
+Python (y Data Analytics por si te llegase a interesar): https://www.kaggle.com/learn
++Python: https://python.swaroopch.com/
+Docker: https://github.com/veggiemonk/awesome-docker#what-is-docker
++ Docker: [https://www.udemy.com/course/docker-essentials/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-7lhCuYT0YeOAjsK0mInUvw&utm_source=aff-campaign&utm_medium=udemyads&LSNPUBID=JVFxdTr9V80](https://www.udemy.com/course/docker-essentials/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-7lhCuYT0YeOAjsK0mInUvw&utm_source=aff-campaign&utm_medium=udemyads&LSNPUBID=JVFxdTr9V80)
+https://github.com/pamoroso/free-python-books
+Protocolo de comunicaciones Modbus: https://www.cursosaula21.com/modbus-que-es-y-como-funciona/
