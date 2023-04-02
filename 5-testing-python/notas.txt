@@ -1,0 +1,51 @@
+TIPOS DE TESTING
+Pre-production
+- Unit tests
+- Functional tests
+- Component tests 
+- Stress tests
+- Fuzz tests -Static analysis
+- Property based tests -Coverage tests
+- Benchmark tests
+- Regression tests
+- Contract tests
+- Lint tests
+- Acceptance tests
+- Mutation tests -Smoke tests
+- UI/UX tests 
+- Usability tests 
+- Penetration tests 
+- Threat modeling
+
+Testing in production
+    Deploy
+    - Integration tests 
+    - Tap compare 
+    - Load tests 
+    - Shadowing 
+    - Config tests
+    - Soak tests
+    Release
+    - Canarying
+    - Monitoring
+    - Traffic shaping
+    - Feature flagging
+    - Exception tracking
+    Post-release
+    - Teeing
+    - Profiling 
+    - Logs/events 
+    - Chaos testing 
+    - Monitoring 
+    - A/B tests
+    - Tracing
+    - Dynamic exploration 
+    - Real user monitoring 
+    - Auditing 
+    - On-call experience
+
+Herramientas integradas:
+Unittest: 
+    Mock: finge el comportamiento de una clase
+        Patch: falsea dependencias
+End-to-end (e2e): finge que una clase externa llama a nuestro programa

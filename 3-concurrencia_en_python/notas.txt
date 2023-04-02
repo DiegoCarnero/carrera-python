@@ -1,0 +1,16 @@
+hilos en python comparten memoria pero se ejecutan en una sola CPU
+varios procesos se ejecutan en CPUs separadas
+cada proceso solo ejecuta un hilo a la vez
+sí que hay paralelismo entre procesos
+procesos se comunican mediante señales
+
+CPU bound: tira mucho de CPU (ML, proceso Excel)
+I/O bound: espera entrada del usuario, procesado de datos, request api...
+
+más hilos son más eficientes que más procesos (mayor facilidad de compartido de memoria)
+
+Si CPU bound, tengo que soltar el GLI (global interpreter lock)
+En las I/O bound, se encarga thread.py
+
+ejecutar con 
+python -m pokeapi.main

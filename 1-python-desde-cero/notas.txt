@@ -157,10 +157,7 @@ Method Names               lower_with_under()   _lower_with_under() (protected) 
 Function/Method Parameters lower_with_under                         
 Local Variables            lower_with_under                         
 
+if __name__ == '__main__': asegura que el codigo solo se ejecute si el programa no se está importando como módulo
 
-Python (y Data Analytics por si te llegase a interesar): https://www.kaggle.com/learn
+Python: https://www.kaggle.com/learn
 +Python: https://python.swaroopch.com/
-Docker: https://github.com/veggiemonk/awesome-docker#what-is-docker
-+ Docker: [https://www.udemy.com/course/docker-essentials/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-7lhCuYT0YeOAjsK0mInUvw&utm_source=aff-campaign&utm_medium=udemyads&LSNPUBID=JVFxdTr9V80](https://www.udemy.com/course/docker-essentials/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-7lhCuYT0YeOAjsK0mInUvw&utm_source=aff-campaign&utm_medium=udemyads&LSNPUBID=JVFxdTr9V80)
-https://github.com/pamoroso/free-python-books
-Protocolo de comunicaciones Modbus: https://www.cursosaula21.com/modbus-que-es-y-como-funciona/

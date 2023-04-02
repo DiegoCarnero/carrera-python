@@ -1,0 +1,39 @@
+PYTEST - test unitario
+         en archivos separados llamados test_*.py o *_test.py
+         primero crear recursos compartidos con una factoria (usar decorador)
+                @pytest.fixture()
+                def calculator() -> Calculator:
+                    return Calculator()
+                @pytest.mark.pamatetrize('nombre, de_parametros', [    <- conjunto tuplas dobles. En este caso: ((num, num, operacion), resultado)
+                    ((1,2,'add'),3)
+                ])
+                def test_calculator(operacion, resultado_esperado, calculator: Calculator):
+                        asset calculator.calcular(*operacion) == resultado_esperado
+         para errores:
+                def test_error(calculator: Calculator):
+                        with pytest.raises(Exception, match='Texto excepcion o expresion regular con la que debe coincidir')
+                            calculator.calculate(0,0,'division)
+
+
+HYPOTHESIS - property based testing. Genera valores automaticamente dadas ciertas condiciones, como tipo de variable
+             para saber si hay errores que no esperamos
+                from hypothesis import given, strategies as st
+                INVERSE_OPERACION = {
+                    'suma': 'resta'
+                }
+                @given(num1=st.floats(),
+                       num2=st.floats(),
+                       operacion=st.sampled_from(['suma','resta','multiplicacion','division'])
+                    )
+                def test_expresion(num1: int, num2: int, operacion: str):
+                    try:
+                        result = calculator.calculate(num1,num2,operacion)
+
+                        assert num1 = calculator.calculate(result, num2, INVERSE_OPERACION[operacion])
+                    except MathematicalException:
+                        return
+
+
+SCHEMATICS - contract testing. Comprueba que la API funciona. Trabaja encima de Hypothesis
+LOCUST - load testing. Prueba de tráfico/cuellos de botella
+         Crear clase heredada de HttpUser y 

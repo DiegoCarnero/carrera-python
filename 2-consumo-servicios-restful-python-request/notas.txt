@@ -1,0 +1,14 @@
+se recibe json. Estos están formados de dict { } y list [ ]
+se puede meter los parámetros en un diccionario 
+en lugar de usar ?var=1&category=2&mode=json en la url
+se peude hacer una variable de entorno con nuestra clave de la api y cogerla con 
+api_key = os.getenv("api_key")
+
+requests.get
+          ^ cambiar metodo para post, delete, etc
+ver codigo con r.status_code
+
+param = {"var": 1, "category": 2, "mode": "json", "APPID": api_key}
+r = request.get("http:)
+r.url: url real a la que se hace la petición, con los parámetros
+r.json: recoger los datos
