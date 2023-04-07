@@ -1,7 +1,7 @@
 # carrera-python
 ## Carrera de Python en OpenWebinars
 -----------------------------------------------------------------------------------------------------------
-## Python 3 desde cero
+## Carrera Desarrollador y tester en Python
 2023/03/22
  - 'Introducción al curso' completado
  - 'Introducción a la programación' completado
@@ -15,3 +15,20 @@
  - 'Estructuras de control' completado
  - Completados ejercicios de 'alternativas' [2](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/3-estructuras_de_control/Alternativas2.py), [5](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/3-estructuras_de_control/Alternativas5.py), [9](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/3-estructuras_de_control/Alternativas9.py) y [13](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/3-estructuras_de_control/Alternativas13.py)
  - Completados ejercicios de 'repetitivas' [1](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/3-estructuras_de_control/Repetitivas1.py), [3](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/3-estructuras_de_control/Repetitivas3.py), [7](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/3-estructuras_de_control/Repetitivas7.py), [10](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/3-estructuras_de_control/Repetitivas10.py) y [11](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/3-estructuras_de_control/Repetitivas11.py)
+
+2023/03/31
+ - 'Tipos de datos secuencias' completado. Hechos ejercicios [1](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/4-tipos_de_datos_secuencias/Listas1.py), [3](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/4-tipos_de_datos_secuencias/Listas3.py) y [10](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/4-tipos_de_datos_secuencias/Listas10.py) de listas; [2](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/4-tipos_de_datos_secuencias/Cadenas2.py), [4](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/4-tipos_de_datos_secuencias/Cadenas4.py), [9](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/4-tipos_de_datos_secuencias/Cadenas9.py) y [10](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/4-tipos_de_datos_secuencias/Cadenas10.py) de cadenas.
+ - 'Tipos de datos mapas' completado. Hechos ejercicios [2](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/5-tipos_de_datos_mapas/dict2.py) y [3](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/5-tipos_de_datos_mapas/dict3.py)
+ - 'Programación estructurada' completado. Hechos ejercicios [2](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/6-programacion_estructurada/Funciones2.py), [3](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/6-programacion_estructurada/Funciones3.py), [11](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/6-programacion_estructurada/Funciones11.py) y [15](https://github.com/DiegoCarnero/carrera-python/blob/main/1-python-desde-cero/6-programacion_estructurada/Funciones15.py)
+ - Añadidos pruebas y material adicional al directorio '[extra](https://github.com/DiegoCarnero/carrera-python/tree/main/1-python-desde-cero/extra)'
+
+2023/04/01
+ - Superado examen de la carrera 'Python 3 desde cero'
+ - Completado taller 'Consume información de un servicio web Restful con Python requests'
+ - Completado taller 'Trabajando concurrencia en Python'
+
+2023/04/02
+ - Completado taller 'Herramientas de Testing para Python'
+ - Completado taller 'Testing en Python'
+-----------------------------------------------------------------------------------------------------------
+## Carrera Python para Data Science
