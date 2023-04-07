@@ -1,0 +1,142 @@
+Jupyter: intellisense con Tab
+         documentacion con Shift+Tab
+para notebook con Ctr+C
+conda deactivate para volver a base
+var.dtype no es lo mismo que var.dtype.type
+array de tecto tiene dtype '<Unumero' con numero siendo la longitud del más largo
+
+np.array([1,2,np.nan]).dtype
+dtype('float64')
+np.array([1,2]).dtype
+dtype('int32')
+en fin...
+
+texto normal es markdown
+generar matriz:
+np.matriz('1 2;3 4')
+acceder celdas de matrices:
+m[1][2] == m[1,2]
+recordar matrices:
+m[0:2,0:2]
+
+se puede sesgar un array según condicion:
+    a = np.arange(10)                       ->  array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    a > 4                                   ->  array([False, False, False, False, False,  True,  True,  True,  True, True])
+    a[a>4]                                  ->  array([5, 6, 7, 8, 9])
+multiple condicion:
+    np.where(np.logical_and(a>=3, a<=7))    -> (array([3, 4, 5, 6, 7], dtype=int64),)
+
+tambien puede hacerse arr[cuaquier_array_de_bools] y lo sesga. Es basicamente lo que hace a[a>4]
+
+recorrer con 
+for v in a:
+o
+for v in np.diter(a):
+
+máscaras:
+si 1/True, es enmascarado/omitido
+si 0/False, no y el valor se advite
+
+x = np.array([1,2,3,-1,4])
+mask_array = ma.masked_array(x, mask = [0,0,0,1,0])
+mask_array -> masked_array(data=[1, 2, 3, --, 4],
+                           mask=[False, False, False,  True, False],
+                   fill_value=999999)
+mask_array.compressed() para tener solo valores admitidos
+mask_array.mask =True/False para afectar a todos
+comprobar elemento: mask_array[3] is ma.masked -> True
+mask_array.filled(0) -> array([1, 2, 3, 0, 4])
+enmascara donde valor: ma.masked_equal(x,4) 
+                       ma.masked_where
+                       ma.masked_less_equal
+enmascara rango: ma.masked_inside(x,1,3). Valores, no posiciones
+
+numpy.datetime64('año-mes-diaThora:minuto:seg')
+meses y dias con 0 delante
+ValueError si algo raro
+array de fecha, solo poner dtype='datetime64'
+dtype:datetime64['D'] Dia, Week, ...
+    np.arange('2020','2021', dtype='datetime64[W]')
+muestra la semana completa aunque no sea dentro del range. Ej, el comando anterior empieza con '2019-12-26'
+
+comparar fechas con ==
+tipo de timedelta con 'm'
+convertir fechas con timedelta64
+    a = np.timedelta64(8, 'D')
+    np.timedelta64(a,'W') -> numpy.timedelta64(1,'W')
+sumar deltas cambia fechas. Lo convierte al menos tipo
+Ej. sumar horas a un mes resulta en horas
+sumar meses es una baina
+
+Constantes:
+inf         PZERO
+NFINF       NZERO
+nan
+pi          e
+isfinite    isinf
+
+Solucion ejer 3: array_fechas[np.is_busday(array_fechas)]
+
+Matriz identidad: np.identity(tamaño, dtype)
+np.eye: lo mismo pero puedes desplazar la diagonal con k=
+
+matriz desde archivo: np.load('archivo', delitmiter=' ')
+
+np.linspace(start=1,stop=10, num=6, endpoint=False, retstep=True)
+num: numero de puntos
+endpoint: si inclurye el numero del stop
+retstep: si muestra el salto o no
+np.logspace: lo mismo pero logaritmico. Hace 10 elevado a los resultados de linspace para los mismos parametros
+
+np.tri(x,y) - unos por debajo de la diagonal
+a.ravel() para pasar a unidimensional
+a.T para transponer
+array python a array numpy: np.asarray()
+np.asfarray
+
+np.asarray_chkfinite() -> falla si tiene nan o inf
+
+juntar arrays:
+    a = np.array([[1,2,3,4],[5,6,7,8]])
+    b = np.array([[4,3,2,1]])
+    np.concatenate((a,b), axis=0)
+b tiene [[ porque si no da problema de dimensiones o algo así
+
+np.split(array, aqui admite numero de partes iguales, u otro array con los puntos donde secionar)
+np.unquie elimina duplicados
+
+multiplicacion de matrices: np.dot
+producto escalar: np.vdot
+producto interno: np.inner
+    0 1 2               5
+            x 0 1 2 = 
+    3 4 5               14
+elevar matriz: np.linalg.matrix_power(m,2). Mismo que np.dot(m,m)
+valores propios: np.linalg.eig(m)
+determinante: np.linalg.det(m)
+resolver ecuaciones: np.linalg.solve(a,b)
+    donde a*x = b -> da x
+
+np.all(codicion que se aplica a todos)
+np.any(si la condicion se aplica a alguno)
+np.logical_and y or tomas todas las condiciones que quieras, no solo dos
+np.allclose e .isclose tienen tolerancia con rtol=
+np.greater_equal compara np.arrays
+tambien np.array_equal porque pa qué la consistencia nombrando metodos
+
+np.prod multiplica todos los numeros en un array
+especificando el eje puede dar otra cosa
+np.sum es lo mismo
+
+np.mean: media de toda la vida
+np.median: valor en el centro
+mediana va mejor si hay valores extremos
+ambas admiten parametro axis=
+np.std() variación estandar:
+La deviación estándar es la raiz cuadrada del promedia de las desviaciones al cuadrado de la media:
+std = sqrt(mean(abs(x - x.mean())**2))
+np.var(): varianza
+desviacion = sqrt(varianza)
+
+axis = 0 cols
+axis = 1 filas
