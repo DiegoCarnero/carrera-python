@@ -35,5 +35,5 @@
 2023/04/07
  - 'Curso de Numpy con Python' completado y examen superado. Hechos boletines [1](https://github.com/DiegoCarnero/carrera-python/blob/main/2-carrera-python-data-science/1-curso-numpy/1-conceptos-basicos/Ejers1.ipynb), [2](https://github.com/DiegoCarnero/carrera-python/blob/main/2-carrera-python-data-science/1-curso-numpy/2-operaciones/Ejers2.ipynb) y [3](https://github.com/DiegoCarnero/carrera-python/blob/main/2-carrera-python-data-science/1-curso-numpy/2-operaciones/Ejers3.ipynb)
 
-2023/04/09
- - Completado 'Estructuras de datos'
+2023/04/13
+ - Visionadas lecciones de tema 'Estructuras de datos'
