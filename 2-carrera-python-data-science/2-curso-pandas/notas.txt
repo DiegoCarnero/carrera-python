@@ -1,0 +1,92 @@
+d = {'a':1,'b':2,'c':3,'d':4,'e':5}
+serie = pd.Series(d, index = ['b','c','a','e','d'])
+reorganiza los valores segun el orden de las claves que hemos proporcionado
+
+funciones de numpy aceptan series de pandas( np.sum(serie) por ej)
+series admiten claves (serie['b']) o indices (serie[0])
+convertir a array de numpy con serie.to_numpy()
+
+ver si indice está en serie con: 'b' in serie
+serie * 2 multiplica cada elemento
+suamr series las suma elemento a elemento
+operar dos series reorganiza los indices alfabeticos
+
+DATAFRAME
+si mandas una lista de diccionarios y alguno tiene una entrada que el reto no, a esos se la pone con NaN
+cada columna de un dataframe es una Serie de pandas, por lo que se peuden hacer operaciones entre columnas
+borrar columnas con del df['col3']
+
+dataset.head y tail para quedarte con principio o final. Admiten entero numero de filas que muestra
+cargando json: orient= es importante
+    index pone categorias como columnas e indices como filas
+    records pone categorias como filas e indices como columnas
+
+pd.read_fwf: ficheros sin separador y pedida fija 'fixed-width-formatted'. 
+header=None si no tiene cabecera en el archivo, si no coge la primera fila
+le damos cabeceras con ds_fijo.columns y un array
+pandas read_parquet
+
+volcado de datos:
+ds.to_csv('path', index = False, sep='#',header=False) para que no ponga el indice de fila. Separador por defecto es ,
+mismo con .to_json. orient= 'split' pone indices y datos por separado. Records para todo mezclado
+.to_parquet tiene engine=, sistema de compresión
+
+indexado:
+solo City == 'Dallas': dataset[dataset['City'] == 'Dallas']
+multiples condiciones con () y &
+
+coger una entrada con:
+dataset.loc[1]. Da error si ese indice no existe
+dataset.iloc[1]  da la primera posición, independientemente del valor del indice
+puedes recoger solo unas columnas con [indice, ['Col1','Col2']]
+con iloc no vale la clave, todo tiene que ser indices
+.iat['fila,'col']
+
+admite slicing como numpy
+
+.sample(frac=) muestras aleatorias
+indexado condicional: dataset['Col'].isin(1,2)
+con .where puede dar NaN en los valores que no satisfagan la condicion. Se cambia el valor con other=
+
+.query admite multiples con operaciodes logicos
+si empiezo la condicion con ' los strs van con " y viceversa
+dataset.query('Age == 41 and City == "Dallas"')
+tambien permite filtrar el indice: .query('index < 4')
+tambien admite 'Col in (41,42)'
+para usar variables poner f'Col == "{variable_externa}"'
+
+dataset.drop_duplicates('City', inplace=False, keep='first')
+inplace: True si modifica el dataset, False si no
+keep: con qué aparición se queda, la 'first' o la 'last'
+
+Multiindice:
+puedes hacer .T para rotar las columnas e indices
+juntar dos columnas con 'zip(array1,array2)'. Zip de cremallera supongo
+valores de primer indice: s.loc['a']
+valores de segundo indice: s.loc[:,'a']
+ver nombre columnas segun profundidad: dataset.columns.get_level_values(0)
+
+filtrado personalizado:
+tuples = [('Columnas_no_importantes', 'Number'),
+          ('Columnas_importantes', 'City'),
+          ('Columnas_no_importantes', 'Gender'),
+          ('Columnas_importantes', 'Age'),
+          ('Columnas_importantes', 'Income'),
+          ('Columnas_no_importantes', 'Illness')
+         ]
+
+multiindex = pd.MultiIndex.from_tuples(tuples)
+dataset.columns = multiindex
+
+accedo con: dataset.loc[:,[('Columnas_importantes','City'),('Columnas_importantes','Age')]]
+
+timestamp: admite ,, o --
+ps.date_range para rangos
+convertir fechas con pd.to_datetime. Este admite fechas dia/mes/año
+con .resample() se puede poner como intervalo '2D' para dos dias O.o
+
+fechas anglosajonas con pd.to_datetime('01/01/2020', dayfirst=False)
+.to_datetime tambien amite cosas como 'Aug 01, 2020', pero admite format='%d/%m/%Y'
+
+mascaras con pd.bdate_range('fecha', fecha', weekmask=mascara).
+haces un array mascara = 'Mon Tue Wed' y t quedas con solo esos dias
