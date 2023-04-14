@@ -15,6 +15,7 @@ DATAFRAME
 si mandas una lista de diccionarios y alguno tiene una entrada que el reto no, a esos se la pone con NaN
 cada columna de un dataframe es una Serie de pandas, por lo que se peuden hacer operaciones entre columnas
 borrar columnas con del df['col3']
+añadir nueva columna solo con df['nueva_columna'] = 
 
 dataset.head y tail para quedarte con principio o final. Admiten entero numero de filas que muestra
 cargando json: orient= es importante
@@ -39,7 +40,7 @@ coger una entrada con:
 dataset.loc[1]. Da error si ese indice no existe
 dataset.iloc[1]  da la primera posición, independientemente del valor del indice
 puedes recoger solo unas columnas con [indice, ['Col1','Col2']]
-con iloc no vale la clave, todo tiene que ser indices
+con iloc no vale la clave, todo tiene que ser indices. Además excluye el limite final
 .iat['fila,'col']
 
 admite slicing como numpy
