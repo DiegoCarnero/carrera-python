@@ -37,3 +37,6 @@
 
 2023/04/13
  - Visionadas lecciones de tema 'Estructuras de datos'
+
+2023/04/15
+ - 'Curso de tratamiento de datos con Pandas en Python' terminado, [ejercicios](https://github.com/DiegoCarnero/carrera-python/blob/main/2-carrera-python-data-science/2-curso-pandas/2-operaciones-con-dataframes/Ejers.ipynb) hechos y examen superado.

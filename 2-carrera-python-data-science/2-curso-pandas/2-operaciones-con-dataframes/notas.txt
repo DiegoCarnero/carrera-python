@@ -4,7 +4,7 @@ o solo objetos con ['O']
 misma historia con exclude
 Sin nada o None (es lo mismo) solo tiene en cuenta columnas numericas
 es lo mismo que hacer mean,count, etc sobre una columnas del dataframe
-df.isna() cuanta valores que faltan, None or np.NaN. Ture si NA, false si tiene valor
+df.isna() cuanta valores que faltan, None or np.NaN. True si NA, false si tiene valor
 también está df.isna()
 
 cut will choose the bins to be evenly spaced according to the values themselves and not the frequency
@@ -22,3 +22,45 @@ data['bedrooms'].fillna(value = -1) rellena valores NaN
 method='' te deja elegir si rellenarcon el valor aterior o posterior
 
 dropna() borra la fila (axis='index') si tiene NA (how:'any') or si todo es NA (how:'all')
+
+append no existe. usar concat(ignore_index=True). concat deja juntar por axis
+join de sql = merge
+join de pandas: junta por indices. A palo da error porque tiene dos columns con el mismo nombre
+lsuffix='_x' les cambia el nombre y evita error
+
+pivot reorganiza los datos. Convierte columnas a indices
+stack y unstack para mover cols y hacer multiindices
+unstack tiene level= para cual quieres mover
+
+pivot_table tiene aggfunc= para aplicar funciones
+
+serie groupby a dataframe: g.reset_index()
+o .to_frame() que conserva el multiindex
+
+aplicar funciones con groupby:
+df.groupby('condition').agg({
+    'price' : 'mean',
+    'bathrooms' : 'median',
+    'waterfront' : np.max,
+    'floors' : [np.min,'max']
+})
+
+mandar dataframes a funciones como
+df[['price','condition']].groupby('condition')['price'].apply(func)
+
+.plot(kind=)
+'bar', ' scatter' (puntos), defecto (linea)
+scatter necesita x= e y= para cambiar nombre de ejes. Solo para dataframes, no columnas
+kindstr
+The kind of plot to produce:
+
+‘line’ : line plot (default)
+‘bar’ : vertical bar plot
+‘barh’ : horizontal bar plot
+‘hist’ : histogram
+‘box’ : boxplot
+‘kde’ : Kernel Density Estimation plot
+‘density’ : same as ‘kde’‘area’ : area plot
+‘pie’ : pie plot
+‘scatter’ : scatter plot (DataFrame only)
+‘hexbin’ : hexbin plot (DataFrame only)
