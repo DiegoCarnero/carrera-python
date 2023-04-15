@@ -1,0 +1,24 @@
+describe(include=) deja especificar qué datones se tienen en cuenta
+por ej, include=[np.number] tiene solo numeros numpy
+o solo objetos con ['O']
+misma historia con exclude
+Sin nada o None (es lo mismo) solo tiene en cuenta columnas numericas
+es lo mismo que hacer mean,count, etc sobre una columnas del dataframe
+df.isna() cuanta valores que faltan, None or np.NaN. Ture si NA, false si tiene valor
+también está df.isna()
+
+cut will choose the bins to be evenly spaced according to the values themselves and not the frequency
+cut admite bins definidas tal que 
+pd.cut(data['bedrooms'], bins = [-1, 3, 8, 10], labels=['menos de 3', 'entre 3 y 8', 'mas de 10'])
+qcut pone el mismo numero de bins en cada sección
+cut: el itnervalo es lo más importante
+qcut: mismo numero de bins
+
+copy(deep=False)
+
+encontrar valores nan: query('column == column') porque nan == nan es False
+funciones como .min tiene parámetro skipna=True/False pero no hace nada??
+data['bedrooms'].fillna(value = -1) rellena valores NaN
+method='' te deja elegir si rellenarcon el valor aterior o posterior
+
+dropna() borra la fila (axis='index') si tiene NA (how:'any') or si todo es NA (how:'all')
