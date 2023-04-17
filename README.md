@@ -40,3 +40,6 @@
 
 2023/04/15
  - 'Curso de tratamiento de datos con Pandas en Python' terminado, [ejercicios](https://github.com/DiegoCarnero/carrera-python/blob/main/2-carrera-python-data-science/2-curso-pandas/2-operaciones-con-dataframes/Ejers.ipynb) hechos y examen superado.
+
+2023/04/16
+ - Curso 'Manipulación de Dataframes con Pandas' visionado, [ejercicios](https://github.com/DiegoCarnero/carrera-python/blob/main/2-carrera-python-data-science/3-manipulacion-de-dataframes-con-pandas/Ejers.ipynb) terminados y examen superado.

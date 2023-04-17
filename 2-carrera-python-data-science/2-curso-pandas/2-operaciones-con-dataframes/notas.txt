@@ -27,6 +27,9 @@ append no existe. usar concat(ignore_index=True). concat deja juntar por axis
 join de sql = merge
 join de pandas: junta por indices. A palo da error porque tiene dos columns con el mismo nombre
 lsuffix='_x' les cambia el nombre y evita error
+con 
+    pd.merge(df1,df2,how='outer',on='name',indicator=True)
+te dicequé tipo de merge puedes hacer 
 
 pivot reorganiza los datos. Convierte columnas a indices
 stack y unstack para mover cols y hacer multiindices
