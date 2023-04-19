@@ -1,0 +1,30 @@
+para poner graficos en la misma imagen simplemente seponen en la misma celda
+punto y coma al final de la celda para que no muestre el tipo de dato y esas vainas
+hitograma t deja definir el numero de bins
+
+plt.subplot devuelve fig, y ax. ax es para dibujarlo.
+el tipo se elige con métodos: .hist, .scatter, etc
+data['city'].value:counts() t dice cuantas veces aparece cada ciudad, admite normalize=True
+
+ax.table para mostrar un dataframe
+
+df.corr(): correlacion entre columnas
+mostrarla en un mapa de calor con:
+    plt.xticks(np.arange(13), data.columns, rotation = 'vertical');
+funciona pero salta un error. Poner data.corr().columns
+
+fig.cga(projection=) no va. Reemplazo aproximado en el notebook
+
+imagenes a matrices con np.array(image)
+Leer imagen con:
+    image = matplotlib.image.PIL.Image.open(urllib.request.urlopen("https://raw.githubusercontent.com/tphinkle/tphinkle.github.io/master/images/2017-8-15/mnist_0.png"))
+    plt.imshow(image)
+A array con:
+    np.array(image)
+Zoom: recortando la matrix
+    lum_img = image[100:-100, :, 1]
+Mapa de color: 
+    cmp=
+Ver leyenda de color:
+    imgplot = plt.imshow(lum_img)
+    plt.colorbar()

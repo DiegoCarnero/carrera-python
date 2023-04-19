@@ -43,3 +43,6 @@
 
 2023/04/16
  - Curso 'Manipulación de Dataframes con Pandas' visionado, [ejercicios](https://github.com/DiegoCarnero/carrera-python/blob/main/2-carrera-python-data-science/3-manipulacion-de-dataframes-con-pandas/Ejers.ipynb) terminados y examen superado.
+
+2023/04/18
+ - Tema sobre Matplotlib visionado y [boletín](https://github.com/DiegoCarnero/carrera-python/blob/main/2-carrera-python-data-science/4-curso-visualizacion-de-datos/1-matplotlib/Ejers.ipynb) completado.
