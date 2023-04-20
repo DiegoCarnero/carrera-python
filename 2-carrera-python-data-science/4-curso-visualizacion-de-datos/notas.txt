@@ -28,3 +28,19 @@ Mapa de color:
 Ver leyenda de color:
     imgplot = plt.imshow(lum_img)
     plt.colorbar()
+
+seaborn:
+.relplot(kind=) para cambiar entre linea, puntos, etc
+.boxplot puede usarse con .catplot(kinda='box')
+orient= para cambiar orientación. Hay que cambiar x <-> y
+
+kinds:"strip", "swarm", "box", "violin",
+    "boxen", "point", "bar", or "count"
+ci: intervalo de confianza. =None para quitarlo
+order: If order is greater than 1, use numpy.polyfit to estimate a polynomial regression.
+
+KDE kernel density estimation:
+https://mathisonian.github.io/kde/
+Empirical cumulative distributions:
+la altura de la curva refleja la proporción de observaciones con un valor menor.
+"20% de las personas son menores de 20 años, el 60% son menores de 40"
