@@ -46,3 +46,7 @@
 
 2023/04/18
  - Tema sobre Matplotlib visionado y [boletín](https://github.com/DiegoCarnero/carrera-python/blob/main/2-carrera-python-data-science/4-curso-visualizacion-de-datos/1-matplotlib/Ejers.ipynb) completado.
+
+2023/04/21
+ - Tema sobre Seaborn visiaonado, curso terminado y [boletín](https://github.com/DiegoCarnero/carrera-python/blob/main/2-carrera-python-data-science/4-curso-visualizacion-de-datos/2-seaborn/Ejers.ipynb) hecho.
+ - Visionado Día 1 de [Curso Python Avanzado](https://extension.uned.es/actividad/idactividad/27728) y [tareas propuestas](https://github.com/DiegoCarnero/carrera-python/blob/main/CursoUNED/Ejercicio1.ipynb) hechas. Temario visto: POO y acceso a bases de datos con SQLalchemy.

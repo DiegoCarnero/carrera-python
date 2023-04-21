@@ -2,10 +2,35 @@ df.interpolate: rellenar valores NaN con cierto método de interpolación
 si tiene multiindex solo method='linear'
 
 SQL:
+crear DB:
+    engine = create_engine('sqlite:///your_database.db', echo=True)
+
+crear class_base/schema:
+    class_base = declarative_base(bind=motor) 
+    #Borrar tablas de mi base de datos
+    class_base.metadata.drop_all(motor) 
+crear tabla con clase Table():
+    your_table = Table(
+        'your_table_name', Metadata(),
+        Column('id', Integer, primary_key=True),
+        Column('name', String),
+        Column('lastname', String),
+    )
+    o
+    class Vehiculo(class_base):
+        __tablename__ = "vehiculos"
+        
+        Matricula = Column(NVARCHAR(7), primary_key=True)
+        Marca = Column(NVARCHAR(20))
+        Kilometraje = Column(Numeric)
+class_base.metadata.create_all(motor) lo coge magicamente (?)
+        o una sola con
+your_table.create(engine)
+
 admite sentencias sql a pelo con:
     from sqlalchemy.sql import text
     s = text('SELECT * FROM vehiculos WHERE Matricula like "%V"')
-                o
+si no:
     j = session.query(Usuario.FirstName, Orden.Date).join(Orden).filter(Orden.UsuarioId==1)
 
 
