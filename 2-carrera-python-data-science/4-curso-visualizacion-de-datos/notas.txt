@@ -44,3 +44,9 @@ https://mathisonian.github.io/kde/
 Empirical cumulative distributions:
 la altura de la curva refleja la proporción de observaciones con un valor menor.
 "20% de las personas son menores de 20 años, el 60% son menores de 40"
+
+varios gráficos diferenciados por columna: FacetGrid
+PairGrid: representa columna-columna
+
+sns.set_theme() resetea el tema
+sns.set_context() contexto de presentación del grafico (?)

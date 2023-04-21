@@ -1,0 +1,23 @@
+df.interpolate: rellenar valores NaN con cierto método de interpolación
+si tiene multiindex solo method='linear'
+
+SQL:
+admite sentencias sql a pelo con:
+    from sqlalchemy.sql import text
+    s = text('SELECT * FROM vehiculos WHERE Matricula like "%V"')
+                o
+    j = session.query(Usuario.FirstName, Orden.Date).join(Orden).filter(Orden.UsuarioId==1)
+
+
+QUERY A DATAFRAME:
+si query:
+    def conseguir_resultados(query):
+        global motor
+        q = query.statement if isinstance(query, sqlalchemy.orm.query.Query) else query
+        return pd.read_sql(q, motor)
+    def mostrar_resultados(query):
+        df = conseguir_resultados(query)
+        display(df)
+
+si sentencia sql:
+    df = pd.read_sql(s, session.bind)
