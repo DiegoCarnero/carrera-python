@@ -1,0 +1,29 @@
+hay que tener cuidado con variables categóricas de cara a desarrollar un modelo
+
+solucionar valores missing:
+    _ = data.isnull().sum() / data.shape[0] * 100
+    cols_to_impute = _[_>0].index
+    for col in cols_to_impute:
+        data[col].fillna(data[col].mean(), inplace = True)
+
+- skewness: medida de simetría. Un dataset simétrico, posee un skewness igual a 0. Una distribución normal posee un skewness igual 0.
+- kurtosis: medida de las colas de la distribución. Cuanto mayor peso tengan las colas, mayor es la kurtosis. Una kurtosis igual a cero se aproximaría a una distribución normal.
+
+si hay muchos valores anómalos hay que plantearse la definición. 
+En modelo lineal, los outliers afectar mcho, no tanto en modelo arbol
+
+Correlación
+1. Variables con una alta correlación nos están dando aproximadamente la misma, por lo que podríamos desprendernos de una de ellas.
+2. Variables con una alta correlación con el target serán variables importantes en nuestro modelo
+
+buscar modulo itertools
+
+hacer distribución más 'normal' aplciando el logaritmo (comprobar normalidad con skew and kur)
+
+stratify = data['quality']: cuando estamos con un conjunto de datos desbalanceado queremos que haya el mismo numero de 0s y 1s en test y train
+ver resultados en:
+    y_train.value_counts(normalize = True)
+    y_test.value_counts(normalize = True)
+dan muy parecidos
+
+dtc.feature_importances_: importancia de cada variable

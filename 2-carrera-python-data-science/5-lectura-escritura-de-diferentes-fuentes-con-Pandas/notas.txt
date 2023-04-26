@@ -1,0 +1,19 @@
+-sep: Separador de elementos
+-heade`: La línea del fichero donde están las cabeceras
+-na_values: Indicamos qué valores son nulos
+-compression: Indica el tipo de compresión del fichero, `{
+    infer
+    gzip
+    bz2
+    zip
+    xz
+    None
+-decimal: Indicamos el separador de decimales
+-encoding: Indica la codificación del fichero
+read_csv() no coge el separador si está dentro de un str
+los decimales los coge como str si no se indica el simbolo con
+decimal=''
+
+df.to_json los guarda como cada columna como un nodo.
+Para tener una fila en cada hijo hacer la transpuesta:
+    df.T.to_json(data_folder_out.format('ricky.json'))
