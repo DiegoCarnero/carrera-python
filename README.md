@@ -54,3 +54,9 @@
 2023/04/26
  - Taller 'Lectura y escritura de diferentes fuentes con Pandas' visionado.
  - Taller 'Eploratoru Data Analysis' visionado.
+
+2023/04/30
+ - Taller 'Caso de estudio con Pandas' visionado.
+ - Superado examen del curso 'Visualización de datos con Python'
+ - Completada carrera 'Python para Data Science'
+ - Visionado Día 1 de [Curso Python Avanzado](https://extension.uned.es/actividad/idactividad/27728) y [tareas propuestas](https://github.com/DiegoCarnero/carrera-python/blob/main/CursoUNED/Ejercicio2.ipynb) hechas. Temario visto: web scrapping(requests), procesado de lenguaje natural (nltk) y entrenado de modelo (sklearn), procesado de imagen (OpenCV) y clustering.
