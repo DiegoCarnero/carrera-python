@@ -59,4 +59,9 @@
  - Taller 'Caso de estudio con Pandas' visionado.
  - Superado examen del curso 'Visualización de datos con Python'
  - Completada carrera 'Python para Data Science'
- - Visionado Día 1 de [Curso Python Avanzado](https://extension.uned.es/actividad/idactividad/27728) y [tareas propuestas](https://github.com/DiegoCarnero/carrera-python/blob/main/CursoUNED/Ejercicio2.ipynb) hechas. Temario visto: web scrapping(requests), procesado de lenguaje natural (nltk) y entrenado de modelo (sklearn), procesado de imagen (OpenCV) y clustering.
+ - Visionado Día 2 de [Curso Python Avanzado](https://extension.uned.es/actividad/idactividad/27728) y [tareas propuestas](https://github.com/DiegoCarnero/carrera-python/blob/main/CursoUNED/Ejercicio2.ipynb) hechas. Temario visto: web scrapping(requests), procesado de lenguaje natural (nltk) y entrenado de modelo (sklearn), procesado de imagen (OpenCV) y clustering.
+
+2023/05/07
+ - Visionada carrera 'Python aplicado a Machine Learning'.
+ - Superado examen del curso 'Machine Learning supervisado con Scikit-learn'
+ - Visionado  Día 3 de [Curso Python Avanzado](https://extension.uned.es/actividad/idactividad/27728). Temario visto: preprocesado de datos (missing values, feature aggregattion/selection/sampling/encoding, outliers, regresión y clasificación, red neuronal)
