@@ -1,5 +1,20 @@
 df.interpolate: rellenar valores NaN con cierto método de interpolación
 si tiene multiindex solo method='linear'
+ej:
+    s = pd.Series([2, np.nan, np.nan, np.nan, np.nan, np.nan, 9, np.nan, np.nan, np.nan, np.nan, 15])
+    s.interpolate(method = 'linear', limit=3, axis=0) 
+    0      2.000000
+    1      3.166667
+    2      4.333333
+    3      5.500000
+    4           NaN
+    5           NaN
+    6      9.000000
+    7     10.200000
+    8     11.400000
+    9     12.600000
+    10          NaN
+    11    15.000000
 
 SQL:
 crear DB:
@@ -46,3 +61,42 @@ si query:
 
 si sentencia sql:
     df = pd.read_sql(s, session.bind)
+
+Clasificación:
+    datos...
+        numéricos: escalado o normalización
+            -intervalo: rango donde se mueve una variable 
+            -ratio:
+        categóricos:
+            -nominal: las clasifica con balores binarios
+            -ordinal: las categorias tienen un orden. Se le da a cada una un índice
+
+Criterio para eliminar:
+    -Nº de datos:  
+    -Si hay datos temporales:
+Criterio para interpolar, enmascarar, etc:
+    -Cuantos datos faltantes continuos:
+    -Si las filas son datos de elementos diferentenes:
+        Ej: cada fila es un alumno, no tiene sentido interpolar las notas en una asignatura
+    -Enmascaramiento evita lios:
+        No eliminas ni inventas datos
+
+Muestreo de datos (Feature sampling):
+intentar mantener aprox las mismas distribuciones que el conjunto original (Simple Random Sampling)
+conservar la variabilidad de la población
+Con muestras desequilibradas este tipo de algoritmo puede no funcionar bien, más apropiado podría ser Stratified Sampling
+
+Reduccion de dimensiones: quedarse con las variables más relevantes (mayor correlacion)
+    PCA: multiplica las variables por un coeficiente y se queda con una única variable
+
+random_state = semilla
+
+scipy.stats.zscore: detectar outliers. Cuanto más desviado de la media, más outlier es, más alto el valor
+unidad: desviación tipica
+
+hacer np.sqrt(metrics.mean_squared_error()) para que no compense errores positivios con negativos
+
+cross_val_score(cv=5): divide el dataset en 5, entrena 1 y prueba con los otros cuatro sucesivamente
+
+REDES NEURONALES:
+meter demasiadas capas puede causar overfitting

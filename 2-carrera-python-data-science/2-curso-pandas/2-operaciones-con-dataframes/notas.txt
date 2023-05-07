@@ -67,3 +67,17 @@ The kind of plot to produce:
 ‘pie’ : pie plot
 ‘scatter’ : scatter plot (DataFrame only)
 ‘hexbin’ : hexbin plot (DataFrame only)
+
+pd.Series.str.metodo_de_strings()
+ ^ ignora las entradas con valores missing. Es lo mismo que cuando haces .dt.year. 
+Para valores numericos hacer o funcione más complejas hacer:
+    pd.Series.apply(math.func)
+pd.Series.str.get_dummies(separador): divide un str en variables indicadoras, con 0 y 1 en sus columnas
+    pd.get_dummies(df) coge las variables categóricas y genera columnas binarias para distinguirlas
+pd.Series.str.extract(regex): da solo los valores que cumplen la regex
+pd.Series.str.findall(regex): lo mismo pero entrada vacia en los que no coinciden
+pd.Series.str.contains('AA|BB'): encuentra las filas que tienen valor AA o BB. str.find solo admite una. 
+    Además contains devuelve una mascara que se puede pasar a loc para tener solo las filas que cumplen el contains
+    str.match() admite regex y devuelve una máscara tamien
+
+puedes aplicar varias mascaras con &
