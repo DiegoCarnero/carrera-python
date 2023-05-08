@@ -65,3 +65,8 @@
  - Visionada carrera 'Python aplicado a Machine Learning'.
  - Superado examen del curso 'Machine Learning supervisado con Scikit-learn'
  - Visionado  Día 3 de [Curso Python Avanzado](https://extension.uned.es/actividad/idactividad/27728). Temario visto: preprocesado de datos (missing values, feature aggregattion/selection/sampling/encoding, outliers, regresión y clasificación, red neuronal)
+
+2023/05/08
+ - Superado examen del curso 'Machine Learning no supervisado en Python'.
+ - Carrera 'Python aplicado a Machine Learning' completada.
+ - Hecha [tarea propuesta](https://github.com/DiegoCarnero/carrera-python/blob/main/CursoUNED/Ejercicio3.ipynb) del [Curso Python Avanzado](https://extension.uned.es/actividad/idactividad/27728) de la UNED. Curso completado.
